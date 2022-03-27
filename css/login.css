@@ -1,6 +1,6 @@
 /* Needs more specificity to override theming app */
 body#body-login {
-    background-color    : #777 !important;
+    background-color    : #313131 !important;
     background-image    : url('https://rs.clnp.cloud') !important;
     background-position : center;
     background-repeat   : no-repeat;
