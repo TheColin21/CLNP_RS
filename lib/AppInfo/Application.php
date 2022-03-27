@@ -1,14 +1,13 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\AppInfo;
+namespace OCA\CLNPRS\AppInfo;
 
-use OCA\Unsplash\EventListener\AddContentSecurityPolicyEventListener;
-use OCA\Unsplash\EventListener\BeforeTemplateRenderedEventListener;
-use OCA\Unsplash\Services\LegacyInitialisationService;
+use OCA\CLNPRS\EventListener\AddContentSecurityPolicyEventListener;
+use OCA\CLNPRS\EventListener\BeforeTemplateRenderedEventListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 use OCP\EventDispatcher\IEventDispatcher;
@@ -17,7 +16,7 @@ use OCP\Security\CSP\AddContentSecurityPolicyEvent;
 /**
  * Class Application
  *
- * @package OCA\Unsplash\AppInfo
+ * @package OCA\CLNPRS\AppInfo
  */
 class Application extends App {
 
@@ -27,7 +26,7 @@ class Application extends App {
      * @param array $urlParams
      */
     public function __construct(array $urlParams = []) {
-        parent::__construct('unsplash', $urlParams);
+        parent::__construct('clnprs', $urlParams);
         $this->registerSystemEvents();
     }
 
@@ -35,16 +34,9 @@ class Application extends App {
      *
      */
     protected function registerSystemEvents() {
-        $container = $this->getContainer();
-        if(method_exists($container, 'get')) {
-            /* @var IEventDispatcher $eventDispatcher */
-            $dispatcher = $this->getContainer()->get(IEventDispatcher::class);
-            $dispatcher->addServiceListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedEventListener::class);
-            $dispatcher->addServiceListener(AddContentSecurityPolicyEvent::class, AddContentSecurityPolicyEventListener::class);
-        } else {
-            /** @var LegacyInitialisationService $service */
-            $service = $this->getContainer()->query(LegacyInitialisationService::class);
-            $service->initialize();
-        }
+        /* @var IEventDispatcher $eventDispatcher */
+        $dispatcher = $this->getContainer()->get(IEventDispatcher::class);
+        $dispatcher->addServiceListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedEventListener::class);
+        $dispatcher->addServiceListener(AddContentSecurityPolicyEvent::class, AddContentSecurityPolicyEventListener::class);
     }
 }

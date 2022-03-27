@@ -1,12 +1,12 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Settings;
+namespace OCA\CLNPRS\Settings;
 
-use OCA\Unsplash\Services\SettingsService;
+use OCA\CLNPRS\Services\SettingsService;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
@@ -14,7 +14,7 @@ use OCP\Settings\ISettings;
 /**
  * Class AdminSettings
  *
- * @package OCA\Unsplash\Settings
+ * @package OCA\CLNPRS\Settings
  */
 class AdminSettings implements ISettings {
 
@@ -43,8 +43,8 @@ class AdminSettings implements ISettings {
      * @return TemplateResponse returns the instance with all parameters set, ready to be rendered
      */
     public function getForm(): TemplateResponse {
-        return new TemplateResponse('unsplash', 'settings/admin', [
-            'saveSettingsUrl' => $this->urlGenerator->linkToRouteAbsolute('unsplash.admin_settings.set'),
+        return new TemplateResponse('clnprs', 'settings/admin', [
+            'saveSettingsUrl' => $this->urlGenerator->linkToRouteAbsolute('clnprs.admin_settings.set'),
             'styleLogin'      => $this->settings->getServerStyleLoginEnabled(),
             'styleHeader'     => $this->settings->getServerStyleHeaderEnabled(),
             'styleDashboard'  => $this->settings->getServerStyleDashboardEnabled(),

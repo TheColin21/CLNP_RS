@@ -1,4 +1,4 @@
-app_name=unsplash
+app_name=clnprs
 
 project_dir=$(CURDIR)/../$(app_name)
 build_dir=$(CURDIR)/build/artifacts

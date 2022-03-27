@@ -4,9 +4,9 @@
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\EventListener;
+namespace OCA\CLNPRS\EventListener;
 
-use OCA\Unsplash\Services\SettingsService;
+use OCA\CLNPRS\Services\SettingsService;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
@@ -45,16 +45,16 @@ class BeforeTemplateRenderedEventListener implements IEventListener {
 
         if($event->isLoggedIn()) {
             if($this->settingsService->getUserStyleHeaderEnabled() && $this->request->getParam('_route') !== 'dashboard.dashboard.index') {
-                Util::addStyle('unsplash', 'header');
+                Util::addStyle('clnprs', 'header');
             }
 
             if($this->settingsService->getUserStyleDashboardEnabled() && $this->request->getParam('_route') === 'dashboard.dashboard.index') {
-                Util::addStyle('unsplash', 'dashboard');
+                Util::addStyle('clnprs', 'dashboard');
             }
         }
 
         if(!$event->isLoggedIn() && $this->settingsService->getServerStyleLoginEnabled()) {
-            Util::addStyle('unsplash', 'login');
+            Util::addStyle('clnprs', 'login');
         }
     }
 }

@@ -4,7 +4,7 @@
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Services;
+namespace OCA\CLNPRS\Services;
 
 use OC\Security\CSP\ContentSecurityPolicy;
 use OCP\Security\IContentSecurityPolicyManager;
@@ -13,7 +13,7 @@ use OCP\Util;
 /**
  * Class LegacyInitialisationService
  *
- * @package OCA\Unsplash\Services
+ * @package OCA\CLNPRS\Services
  */
 class LegacyInitialisationService {
 
@@ -51,21 +51,20 @@ class LegacyInitialisationService {
      */
     protected function registerStyleSheets() {
         if($this->settingsService->getUserStyleHeaderEnabled()) {
-            Util::addStyle('unsplash', 'header');
+            Util::addStyle('clnprs', 'header');
         }
         if($this->settingsService->getServerStyleLoginEnabled()) {
-            Util::addStyle('unsplash', 'login');
+            Util::addStyle('clnprs', 'login');
         }
     }
 
     /**
-     * Allow Unsplash hosts in the csp
+     * Allow clnprs hosts in the csp
      */
     protected function registerCsp() {
         if($this->settingsService->getUserStyleHeaderEnabled() || $this->settingsService->getServerStyleLoginEnabled()) {
             $policy  = new ContentSecurityPolicy();
-            $policy->addAllowedImageDomain('https://source.unsplash.com');
-            $policy->addAllowedImageDomain('https://images.unsplash.com');
+            $policy->addAllowedImageDomain('https://rs.clnp.cloud');
             $this->contentSecurityPolicyManager->addDefaultPolicy($policy);
         }
     }

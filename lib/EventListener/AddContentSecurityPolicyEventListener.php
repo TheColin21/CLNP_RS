@@ -4,10 +4,10 @@
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\EventListener;
+namespace OCA\CLNPRS\EventListener;
 
 use OC\Security\CSP\ContentSecurityPolicy;
-use OCA\Unsplash\Services\SettingsService;
+use OCA\CLNPRS\Services\SettingsService;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\Security\CSP\AddContentSecurityPolicyEvent;
@@ -37,8 +37,7 @@ class AddContentSecurityPolicyEventListener implements IEventListener {
 
         if($this->settingsService->getUserStyleHeaderEnabled() || $this->settingsService->getServerStyleLoginEnabled() || $this->settingsService->getUserStyleDashboardEnabled()) {
             $policy = new ContentSecurityPolicy();
-            $policy->addAllowedImageDomain('https://source.unsplash.com');
-            $policy->addAllowedImageDomain('https://images.unsplash.com');
+            $policy->addAllowedImageDomain('https://rs.clnp.cloud');
             $event->addPolicy($policy);
         }
     }

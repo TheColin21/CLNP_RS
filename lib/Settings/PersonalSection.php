@@ -4,7 +4,7 @@
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Settings;
+namespace OCA\CLNPRS\Settings;
 
 use OCP\IL10N;
 use OCP\IURLGenerator;
@@ -13,7 +13,7 @@ use OCP\Settings\IIconSection;
 /**
  * Class PersonalSection
  *
- * @package OCA\Unsplash\Settings
+ * @package OCA\CLNPRS\Settings
  */
 class PersonalSection implements IIconSection {
 
@@ -68,14 +68,14 @@ class PersonalSection implements IIconSection {
     }
 
     /**
-     * Returns the translated name as it should be displayed, e.g. 'Splash'.
+     * Returns the translated name as it should be displayed, e.g. 'CLNP RS'.
      * Use the L10N service to translate it.
      *
      * @return string
      * @since 9.1
      */
     public function getName(): string {
-        return $this->localisation->t('Splash');
+        return $this->localisation->t('clnprs');
     }
 
     /**

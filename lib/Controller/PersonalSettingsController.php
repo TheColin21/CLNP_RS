@@ -1,12 +1,12 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Controller;
+namespace OCA\CLNPRS\Controller;
 
-use OCA\Unsplash\Services\SettingsService;
+use OCA\CLNPRS\Services\SettingsService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;
@@ -15,7 +15,7 @@ use OCP\IRequest;
 /**
  * Class PersonalSettingsController
  *
- * @package OCA\Unsplash\Controller
+ * @package OCA\CLNPRS\Controller
  */
 class PersonalSettingsController extends Controller {
 

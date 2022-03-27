@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-use OCA\Unsplash\Settings\PersonalSettings;
+use OCA\CLNPRS\Settings\PersonalSettings;
 use OCP\AppFramework\QueryException;
 
-$app = new \OCA\Unsplash\AppInfo\Application();
+$app = new \OCA\CLNPRS\AppInfo\Application();
 try {
     /** @var PersonalSettings $controller */
     $controller = $app->getContainer()->query(PersonalSettings::class);

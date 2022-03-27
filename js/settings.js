@@ -1,7 +1,7 @@
 (function() {
     function initialize() {
         this._timer = [];
-        this.saveUrl = document.getElementById('unsplash-settings').dataset.save;
+        this.saveUrl = document.getElementById('clnprs-settings').dataset.save;
 
         let settings = document.querySelectorAll('[data-setting]');
         for(let setting of settings) {
@@ -55,7 +55,7 @@
      * @private
      */
     function _showMessage(type) {
-        let element = document.querySelector(`#unsplash-settings .msg.${type}`);
+        let element = document.querySelector(`#clnprs-settings .msg.${type}`);
 
         element.classList.remove('active');
         element.classList.add('active');

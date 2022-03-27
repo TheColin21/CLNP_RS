@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Settings;
+namespace OCA\CLNPRS\Settings;
 
 use OC_Defaults;
-use OCA\Unsplash\Services\SettingsService;
+use OCA\CLNPRS\Services\SettingsService;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
@@ -15,7 +15,7 @@ use OCP\Settings\ISettings;
 /**
  * Class PersonalSettingsController
  *
- * @package OCA\Unsplash\Controller\Settings
+ * @package OCA\CLNPRS\Controller\Settings
  */
 class PersonalSettings implements ISettings {
 
@@ -61,8 +61,8 @@ class PersonalSettings implements ISettings {
      * @return TemplateResponse
      */
     public function getForm() {
-        return new TemplateResponse('unsplash', 'settings/personal', [
-            'saveSettingsUrl' => $this->urlGenerator->linkToRouteAbsolute('unsplash.personal_settings.set'),
+        return new TemplateResponse('clnprs', 'settings/personal', [
+            'saveSettingsUrl' => $this->urlGenerator->linkToRouteAbsolute('clnprs.personal_settings.set'),
             'styleHeader'     => $this->settings->getUserStyleHeaderEnabled(),
             'styleDashboard'  => $this->settings->getUserStyleDashboardEnabled(),
             'hasDashboard'    => $this->settings->getNextcloudVersion() > 19,

@@ -1,25 +1,25 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-namespace OCA\Unsplash\Services;
+namespace OCA\CLNPRS\Services;
 
 use OCP\IConfig;
 
 /**
  * Class SettingsService
  *
- * @package OCA\Unsplash\Services
+ * @package OCA\CLNPRS\Services
  */
 class SettingsService {
 
-    const STYLE_LOGIN          = 'unsplash/style/login';
-    const STYLE_HEADER         = 'unsplash/style/header';
-    const STYLE_DASHBORAD      = 'unsplash/style/dashborad';
-    const USER_STYLE_HEADER    = 'unsplash/style/header';
-    const USER_STYLE_DASHBORAD = 'unsplash/style/dashborad';
+    const STYLE_LOGIN          = 'clnprs/style/login';
+    const STYLE_HEADER         = 'clnprs/style/header';
+    const STYLE_DASHBORAD      = 'clnprs/style/dashborad';
+    const USER_STYLE_HEADER    = 'clnprs/style/header';
+    const USER_STYLE_DASHBORAD = 'clnprs/style/dashborad';
 
     /**
      * @var IConfig

@@ -1,34 +1,31 @@
 <?xml version="1.0"?>
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-    <id>unsplash</id>
-    <name>Splash</name>
-    <summary>📸🔀☁️ Random background from Unsplash</summary>
-    <summary lang="de">📸🔀☁️ Zufällige Hintergrundbilder von Unsplash</summary>
-    <description>Show a new random featured nature photo from Unsplash in your nextcloud.</description>
-    <description lang="de">Zeigt ein zufällig ausgewähltes Naturfoto von Unsplash in ihrer Nextcloud.</description>
+    <id>clnprs</id>
+    <name>CLNP RS</name>
+    <summary>📸🔀☁️ Random background from rs.clnp.cloud</summary>
+    <summary lang="de">📸🔀☁️ Zufällige Hintergrundbilder von rs.clnp.cloud</summary>
+    <description>Show a new random featured SVG from rs.clnp.cloud in your nextcloud.</description>
+    <description lang="de">Zeigt eine zufällige rs.clnp.cloud von rs.clnp.cloud in ihrer Nextcloud.</description>
     <version>1.2.4</version>
     <licence>agpl</licence>
-    <author mail="hey@jancborchardt.net" homepage="https://jancborchardt.net">Jan-Christoph Borchardt</author>
-    <author homepage="https://github.com/marius-wieschollek">Marius Wieschollek</author>
-    <author homepage="https://github.com/newhinton">Felix Nüsse</author>
-    <namespace>Unsplash</namespace>
+    <author mail="admin@clnp.eu" homepage="https://clnp.eu">Colin Pohle</author>
+    <author homepage="https://clnp.eu">Colin Pohle</author>
+    <namespace>CLNPRS</namespace>
     <category>customization</category>
     <category>multimedia</category>
     <category>tools</category>
-    <website>https://github.com/jancborchardt/unsplash/</website>
-    <bugs>https://github.com/jancborchardt/unsplash/issues</bugs>
-    <repository type="git">https://github.com/jancborchardt/unsplash.git</repository>
-    <screenshot>https://raw.githubusercontent.com/jancborchardt/unsplash/master/unsplash.jpg</screenshot>
-    <screenshot>https://raw.githubusercontent.com/jancborchardt/unsplash/master/unsplash-header.jpg</screenshot>
+    <website>https://github.com/TheColin21/RandomSVGLogin/</website>
+    <bugs>https://github.comTheColin21/RandomSVGLogin/issues</bugs>
+    <repository type="git">https://github.com/TheColin21/RandomSVGLogin.git</repository>
     <dependencies>
         <php min-version="7.0" />
         <nextcloud min-version="14" max-version="23"/>
     </dependencies>
     <settings>
-        <admin>OCA\Unsplash\Settings\AdminSettings</admin>
-        <personal>OCA\Unsplash\Settings\PersonalSettings</personal>
-        <personal-section>OCA\Unsplash\Settings\PersonalSection</personal-section>
-    </settings>
+        <admin>OCA\CLNPRS\Settings\AdminSettings</admin>
+        <personal>OCA\CLNPRS\Settings\PersonalSettings</personal>
+        <personal-section>OCA\CLNPRS\Settings\PersonalSection</personal-section>
+        </settings>
 </info>
 

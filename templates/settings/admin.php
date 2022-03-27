@@ -1,14 +1,14 @@
 <?php
 /**
- * This file is part of the Unsplash App
+ * This file is part of the CLNPRS App
  * and licensed under the AGPL.
  */
 
-script('unsplash', 'settings');
-style('unsplash', 'settings');
+script('clnprs', 'settings');
+style('clnprs', 'settings');
 
 ?>
-<div class="section" id="unsplash-settings" data-save="<?=$_['saveSettingsUrl']?>">
+<div class="section" id="clnprs-settings" data-save="<?=$_['saveSettingsUrl']?>">
     <h2>
         <?php p($l->t('Random Background Images')); ?>
         <span class="msg success"><?php p($l->t('Saved')); ?></span>
@@ -16,21 +16,20 @@ style('unsplash', 'settings');
     </h2>
     <p class="settings-hint">
         <?php p($l->t('Here you can specify where random backgrounds should be used by default.')); ?>
-        <?php print_unescaped($this->inc('partials/license')); ?>
     </p>
     <form>
         <div>
-            <input id="unsplash-style-login" name="unsplash-style-login" data-setting="style/login" type="checkbox" <?=$_['styleLogin'] ? 'checked':''?> class="checkbox">
-            <label for="unsplash-style-login"><?php p($l->t('Set random image as login background')); ?></label>
+            <input id="clnprs-style-login" name="clnprs-style-login" data-setting="style/login" type="checkbox" <?=$_['styleLogin'] ? 'checked':''?> class="checkbox">
+            <label for="clnprs-style-login"><?php p($l->t('Set random image as login background')); ?></label>
         </div>
         <div>
-            <input id="unsplash-style-header" name="unsplash-style-header" data-setting="style/header" type="checkbox" <?=$_['styleHeader'] ? 'checked':''?> class="checkbox">
-            <label for="unsplash-style-header"><?php p($l->t('Set random image as header background')); ?></label>
+            <input id="clnprs-style-header" name="clnprs-style-header" data-setting="style/header" type="checkbox" <?=$_['styleHeader'] ? 'checked':''?> class="checkbox">
+            <label for="clnprs-style-header"><?php p($l->t('Set random image as header background')); ?></label>
         </div>
         <?php if($_['hasDashboard']): ?>
         <div>
-            <input id="unsplash-style-dashboard" name="unsplash-style-dashboard" data-setting="style/dashboard" type="checkbox" <?=$_['styleDashboard'] ? 'checked':''?> class="checkbox">
-            <label for="unsplash-style-dashboard"><?php p($l->t('Set random image as dashboard background')); ?></label>
+            <input id="clnprs-style-dashboard" name="clnprs-style-dashboard" data-setting="style/dashboard" type="checkbox" <?=$_['styleDashboard'] ? 'checked':''?> class="checkbox">
+            <label for="clnprs-style-dashboard"><?php p($l->t('Set random image as dashboard background')); ?></label>
         </div>
         <?php endif; ?>
     </form>
