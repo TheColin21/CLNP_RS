@@ -116,7 +116,7 @@ class SettingsService {
      *
      * @param int $styleHeader
      */
-    public function setServerStyleHeaderEnabled(int $styleHeader = 1) {
+    public function setServerStyleHeaderEnabled(int $styleHeader = 0) {
         $this->config->setAppValue($this->appName, self::STYLE_HEADER, $styleHeader);
     }
 
@@ -134,7 +134,7 @@ class SettingsService {
      *
      * @param int $styleDashboard
      */
-    public function setServerStyleDashboardEnabled(int $styleDashboard = 1) {
+    public function setServerStyleDashboardEnabled(int $styleDashboard = 0) {
         $this->config->setAppValue($this->appName, self::STYLE_DASHBORAD, $styleDashboard);
     }
 
